@@ -21,10 +21,8 @@ jobs:
   get_current_step:
     name: Check current step number
     if: |
-      ${{ 
-        contains(github.event.comment.body, 'fail')   # check the comment contains the keyword
-      }}
-    #  github.event.issue.pull_request }} &&            # only for pull requests, not issues 
+      ${{ contains(github.event.comment.body, 'fail') &&  # check the comment contains the keyword
+      github.event.issue.pull_request }}             # only for pull requests, not issues 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
