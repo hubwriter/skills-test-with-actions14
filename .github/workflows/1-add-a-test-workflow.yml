@@ -20,7 +20,8 @@ jobs:
   # Get the current step to only run the main job when the learner is on the same step.
   get_current_step:
     name: Check current step number
-    if: ${{ contains(github.event.comment.body, 'fail') }}   # check the comment contains the keyword
+    if: |
+      contains(github.event.comment.body, 'fail')   # check the comment contains the keyword
     #  ${{ github.event.issue.pull_request }} &&            # only for pull requests, not issues 
     runs-on: ubuntu-latest
     steps:
