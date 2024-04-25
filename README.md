@@ -19,7 +19,7 @@ _Create workflows that enable you to use Continuous Integration (CI) for your pr
   Define terms and link to docs.github.com.
 -->
 
-## xxxxxxxxxxxxxxxxxxxxx
+## Step 2: Fix the test
 
 _Great job adding the templated workflow! :tada:_
 
